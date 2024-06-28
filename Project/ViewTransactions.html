@@ -25,24 +25,24 @@
         <td><?= $line[2] ?></td>
         <td><?php
                 if (FormatTransaction($line[3]) > 0) {
-            echo "<pr style='color: green'>$line[3]</pr>";
+            echo "<p style='color: green'>" . htmlspecialchars($line[3]) . "</p>";
             } else {
-            echo "<pr style='color: red'>$line[3]</pr>";
+            echo "<p style='color: red'>" . htmlspecialchars($line[3]) . "</p>";
             }
             ?></td>
     </tr>
     <?php endforeach; ?>
     <tr>
         <td colspan="3" style="text-align:right">Total Income:</td>
-        <td>$<?= $income ?></td>
+        <td>$<?= htmlspecialchars($income) ?></td>
     </tr>
     <tr>
         <td colspan="3" style="text-align:right">Total Expense:</td>
-        <td>$<?= $expenses ?></td>
+        <td>$<?= htmlspecialchars($expenses) ?></td>
     </tr>
     <tr>
         <td colspan="3" style="text-align:right">Net Total:</td>
-        <td>$<?= $netTotal ?></td>
+        <td>$<?= htmlspecialchars($netTotal) ?></td>
     </tr>
 
     </tbody>
